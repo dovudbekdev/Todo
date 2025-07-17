@@ -16,10 +16,10 @@ app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", path.join(process.cwd(), "src", "views"));
 
-// EJS' route
-app.use("/", pageRouter);
-
 // API route
 app.use("/api/todo", todoRouter);
+
+// EJS' route
+app.use("/", pageRouter);
 
 export default app;
